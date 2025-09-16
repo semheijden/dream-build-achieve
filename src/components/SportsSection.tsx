@@ -1,65 +1,54 @@
-import voetbalImage from "@/assets/voetbal.jpg";
-import hockeyImage from "@/assets/hockey.jpg";
-import padelImage from "@/assets/padel.jpg";
-import tennisImage from "@/assets/tennis.jpg";
-import hardlopenImage from "@/assets/hardlopen.jpg";
+import voetbalImage from "@/assets/football.jpeg";
+import hockeyImage from "@/assets/field-hockey-portrait.png";
+import padelImage from "@/assets/padel-portrait.png";
+import tennisImage from "@/assets/tennis-portrait.png";
+import hardlopenImage from "@/assets/running-action.jpg";
 
 const sportsData = [
   { name: "VOETBAL", image: voetbalImage },
-  { name: "HOCKEY", image: hockeyImage },
   { name: "PADEL", image: padelImage },
+  { name: "HOCKEY", image: hockeyImage },
   { name: "TENNIS", image: tennisImage },
   { name: "HARDLOPEN", image: hardlopenImage },
 ];
 
 const SportsSection = () => {
   return (
-    <section className="py-20 bg-hero">
-      <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold text-center text-hero-foreground mb-16">
-          Sporten
-        </h2>
+    <section className="py-20 px-4 h-screen">
+      <div className="mx-auto px-24 h-full">
         
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-20">
+        <div className="flex flex-col items-start">
+          <span className="text-sm text-white/80 -mb-1">INSTRUCTIES</span>
+          <h2 className="text-6xl font-bold text-hero-foreground flex-shrink-0">
+            KIES JE SPORT
+          </h2>
+          </div>
+          <div className="text-white/90 text-xl mb-4 leading-relaxed max-w-2xl pt-2">
+            <p className="">
+              Ontdek hoe ActiveColor jou kan helpen
+            </p>
+          </div>
+        
+        
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-1 rounded-sm h-[70%] align-bottom">
           {sportsData.map((sport, index) => (
             <div
               key={sport.name}
-              className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer"
+              className="group relative overflow-hidden h-full cursor-pointer rounded-lg"
             >
               <img
                 src={sport.image}
                 alt={sport.name}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4">
-                <h3 className="text-white font-bold text-lg">
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-white font-bold text-lg tracking-wider">
                   {sport.name}
                 </h3>
               </div>
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-blue transition-colors duration-300 rounded-lg" />
             </div>
           ))}
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="text-6xl font-bold text-brand-blue mb-4">
-              5.3M
-            </div>
-            <p className="text-hero-foreground/80 text-lg leading-relaxed">
-              Sportblessures per jaar (illustratie: atleet in beweging met felblauwe gloeiende contour op zwarte achtergrond, cyan accenten benadrukken snelheid)
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-6xl font-bold text-brand-cyan mb-4">
-              1 op 3
-            </div>
-            <p className="text-hero-foreground/80 text-lg leading-relaxed">
-              Blessures door koude spieren (Visual: gloeiende blauwe lijp, vloeiend van donkerblauw naar cyan richting het getal, accentueert de statistiek)
-            </p>
-          </div>
         </div>
       </div>
     </section>

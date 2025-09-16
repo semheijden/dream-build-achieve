@@ -3,7 +3,7 @@ import productImage from "@/assets/product-package.jpg";
 
 const ProductSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-hero to-dark-card">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
           
