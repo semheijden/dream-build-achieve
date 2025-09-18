@@ -1,8 +1,8 @@
-import voetbalImage from "@/assets/football.jpeg";
+import voetbalImage from "@/assets/soccer-ball.png";
 import hockeyImage from "@/assets/field-hockey-portrait.png";
 import padelImage from "@/assets/padel-portrait.png";
 import tennisImage from "@/assets/tennis-portrait.png";
-import hardlopenImage from "@/assets/running-action.jpg";
+import hardlopenImage from "@/assets/running.png";
 
 const sportsData = [
   { name: "VOETBAL", image: voetbalImage },

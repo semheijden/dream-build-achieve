@@ -14,7 +14,7 @@ const HeroSection = () => {
     >
       <div className="px-4 text-center w-1/2">
         <div className="w-full flex flex-col text-left justify-start items-start">
-          <h1 className="text-5xl md:text-[8rem] lg:text-[10rem] font-bold text-hero-foreground mb-6 leading-tight">
+          <h1 className="text-5xl md:text-[8rem] lg:text-[8rem] 2xl:text-[10rem] font-bold text-hero-foreground mb-6 leading-tight">
             TRAIN MET VERTROUWEN
           </h1>
       
